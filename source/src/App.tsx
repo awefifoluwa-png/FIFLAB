@@ -259,6 +259,41 @@ export default function App() {
             </div>
             <span className="version-label">LOCAL WORKSPACE</span>
           </div>
+          {tab === "Dashboard" && (
+  <Panel title="About FIFLAB">
+    <p>
+      FIFLAB helps cementitious materials researchers calculate
+      material quantities and plan laboratory specimens.
+    </p>
+
+    <p>
+      <strong>Developed by Fifoluwa Awe</strong>
+      <br />
+      MASc Civil Engineering, University of Windsor.
+    </p>
+
+    <p>
+      <strong>Development and responsibility:</strong> I developed
+      FIFLAB with assistance from ChatGPT for coding, troubleshooting
+      and deployment guidance. I uploaded the project files to GitHub,
+      connected the repository to Netlify and worked through deployment
+      errors to publish the tool online. I selected the research focus
+      and features and am responsible for reviewing the methods,
+      checking calculations and testing the tool.
+    </p>
+
+    <p>
+      <strong>Try an example:</strong> Three cubes with 50 mm
+      sides give a total volume of 0.375 L. Open the specimen
+      calculator and change the dimensions or quantity to
+      update the estimate.
+    </p>
+
+    <button onClick={() => go("Specimen calculator")}>
+      Try the specimen calculator
+    </button>
+  </Panel>
+)}
           {project.measurements.some((m) => m.origin === "sample") && (
             <div className="sample-banner">
               <strong>Synthetic example data present.</strong>{" "}
